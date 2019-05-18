@@ -9,7 +9,15 @@ import { AuthModule } from './auth/auth.module';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 
 @NgModule({
-  declarations: [AuthComponent, HeaderComponent, FooterComponent, NavbarComponent, PageNotFoundComponent, SideNavbarComponent],
-  imports: [CommonModule, AuthModule]
+  declarations: [
+    AuthComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavbarComponent,
+    PageNotFoundComponent,
+    SideNavbarComponent
+  ],
+  imports: [CommonModule, AuthModule],
+  exports: []
 })
 export class CoreModule {}
