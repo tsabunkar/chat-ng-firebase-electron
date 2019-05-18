@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    // BrowserAnimationsModule, // If you want animation,
-    NoopAnimationsModule, // If you dont want animation,
+    BrowserAnimationsModule, // If you want animation,
+    // NoopAnimationsModule, // If you dont want animation,
     BrowserModule,
     CoreModule,
     SharedModule,

@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthModule } from './auth/auth.module';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { SideNavbarComponent } from './side-navbar/side-navbar.component';
     PageNotFoundComponent,
     SideNavbarComponent
   ],
-  imports: [CommonModule, AuthModule],
+  imports: [CommonModule, SharedModule, AuthModule],
   exports: []
 })
 export class CoreModule {}

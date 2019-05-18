@@ -1,0 +1,13 @@
+.container {
+  border: 1px grey solid;
+  padding: 2%;
+  margin: 1%;
+}
+
+a {
+  color: rgb(45, 81, 243);
+}
+a:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
