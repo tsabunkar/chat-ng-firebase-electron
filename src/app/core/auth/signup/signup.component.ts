@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
     this.authService.signUpNewUser(this.signUpGroup.value);
   }
 
-  signin() {
+  redirectToSignin() {
     this.router.navigate(['signin']);
   }
 }

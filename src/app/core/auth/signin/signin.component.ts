@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signin',
@@ -10,20 +11,21 @@ import { Router } from '@angular/router';
 export class SigninComponent implements OnInit {
   signInGroup: FormGroup;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {
     this.signInGroup = new FormGroup({
-      emailControl: new FormControl('', [Validators.required]),
-      passwordControl: new FormControl('', [Validators.required])
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required])
     });
   }
 
   onSignIn() {
     console.log(this.signInGroup);
+    this.authService.signInWithLocalCredentials(this.signInGroup.value);
   }
 
-  signup() {
+  redirectToSignup() {
     this.router.navigate(['signup']);
   }
 }

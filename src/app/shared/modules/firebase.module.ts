@@ -12,7 +12,8 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule
+    // AngularFireStorageModule,
+    AngularFirestoreModule
   ]
 })
 export class FirebaseModule {}
